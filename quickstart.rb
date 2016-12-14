@@ -57,18 +57,17 @@ puts("Extracting #{RANGE} from Google Sheet")
 puts("⚠️  Do they match these column indexes: #{RANGE_COLUMNS}")
 
 # Creates unique .csv file
-OUTPUT = "output_#{SecureRandom.base64(6)}.csv"
+OUTPUT = "output.csv"
 puts("🎉  Created: #{OUTPUT}")
 
-service.get_spreadsheet_values(SPREADSHEET_ID, RANGE).values.each do |data|
-  # Pick only the relevant columns from the extracted data from Google Sheets
-  new_row = RANGE_COLUMNS.map {|column| data[column]}
-
-  # Append the new_row of relevant data just created to the csv file
-  CSV.open(OUTPUT, 'a+') do |csv|
+CSV.open(OUTPUT, 'w') do |csv|
+  service.get_spreadsheet_values(SPREADSHEET_ID, RANGE).values.each do |data|
+    # Pick only the relevant columns from the extracted data from Google Sheets
+    new_row = RANGE_COLUMNS.map {|column| data[column]}
+    # Append the new_row of relevant data just created to the csv file
     csv << new_row
+    puts("➕ Adding: #{new_row}")
   end
-  puts("➕ Adding: #{new_row}")
 end
 
 puts("✅  Sheet to CSV extraction complete")
