@@ -50,7 +50,7 @@ service.authorization = authorize
 SPREADSHEET_ID = '18O7P29_TeVexjVSiscSsLwMFrZgqAiYfvU8JBnA0rm4'
 RANGE = "'MKT: A1 Referrer + Sources'!A2:E"
 # Convert the columns you want from your spreadsheet into a comma seperated array of numbers
-# If it's the first column, add the number one into the array
+# If it's the first column, add the number zero into the array
 # If it's the fifth column, add the number four into the array. Don't forget to seperate the numbers with a comma!
 RANGE_COLUMNS = [0, 4].sort
 puts("Extracting #{RANGE} from Google Sheet")
