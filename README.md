@@ -3,8 +3,8 @@ Ruby script to download a range of data from a single Google Sheet and output it
 
 ## Setup
 1. Follow [these instructions from Google](https://developers.google.com/sheets/quickstart/ruby) to get the necessary client_secret.json and gem installation instructions. You may need to rename the file from Google.
-2. Change the spreadsheet ID in [quickstart.rb:L50](https://github.com/tongrhj/google-sheet-to-csv/blob/55d5a3b1757d48cc57655187e819dac0f0c6afae/quickstart.rb#L50)
-3. Change the [data range](https://github.com/tongrhj/google-sheet-to-csv/blob/55d5a3b1757d48cc57655187e819dac0f0c6afae/quickstart.rb#L51) and [column numbers](https://github.com/tongrhj/google-sheet-to-csv/blob/55d5a3b1757d48cc57655187e819dac0f0c6afae/quickstart.rb#L55) to what you want to extract
+2. Change the spreadsheet ID in [quickstart.rb:L50](https://github.com/tongrhj/google-sheet-to-csv/blob/master/quickstart.rb#L50)
+3. Change the [data range](https://github.com/tongrhj/google-sheet-to-csv/blob/master/quickstart.rb#L51) and [column numbers](https://github.com/tongrhj/google-sheet-to-csv/blob/master/quickstart.rb#L55) to what you want to extract
 
 ## Run It
 ```
